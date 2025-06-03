@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="admin_view_customer">admin_view_customer</a>
+<a href="logout_user">logout</a>
+
+
+<h1>admin_view_customer</h1>
+<table>
+    <tr>
+        <th> First Name</th>
+        <th>Last name</th>
+        <th>Email</th>
+    </tr>
+
+    {% for row in user_det %}
+    <tr>
+        <td>{{ row.first_name }}</td>
+        <td>{{ row.last_name }}</td>
+        <td>{{ row.email }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
